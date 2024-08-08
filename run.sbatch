@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --time=72:00:00
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=5
+#SBATCH --cpus-per-task=8
 #SBATCH --gres=gpu:4
 #SBATCH --job-name=python-ex
 #SBATCH --mail-user=s319439@studenti.polito.it
