@@ -3,11 +3,10 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
 #SBATCH --gres=gpu:4
-#SBATCH --job-name=python-ex
+#SBATCH --job-name=simsiam
 #SBATCH --mail-user=s319439@studenti.polito.it
 #SBATCH --mail-type=END
 #SBATCH --partition=cuda
-#SBATCH --nodes=1
 #SBATCH --output=/home/nberardo/simsiam/train.log
 #SBATCH --error=/home/nberardo/simsiam/train.err
 ###### 1 Load the module
@@ -19,7 +18,7 @@ source /home/nberardo/myenv/bin/activate
 python main_simsiam.py \
   -a resnet50 \
   --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 \
-  --fix-pred-lr \
+  --fix-pred-lr --resume /home/nberardo/simsiam/checkpoint_0023.pth.tar \
   /home/eaiello/ImageNet
 
 
