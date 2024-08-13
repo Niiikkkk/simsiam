@@ -18,7 +18,7 @@ source /home/nberardo/myenv/bin/activate
 python main_simsiam.py \
   -a resnet50 \
   --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 \
-  --fix-pred-lr --resume /home/nberardo/simsiam/checkpoint_0023.pth.tar \
+  --fix-pred-lr --resume /home/nberardo/simsiam/checkpoint_0079.pth.tar \
   /home/eaiello/ImageNet
 
 
