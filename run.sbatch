@@ -15,12 +15,12 @@ module load intel/python/3
 # 2 Activate the virtual environment
 source /home/nberardo/myenv/bin/activate
 # 3 Run the python script
-python extract_backbone.py
-"""
+#python extract_backbone.py
+
 python main_lincls.py \
   -a resnet50 \
   --batch-size 512 \
   --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 \
-  --pretrained /home/nberardo/simsiam/checkpoint_0099.pth.tar \
+  --pretrained /home/nberardo/simsiam/model_best.pth.tar \
   --lars \
-  /home/eaiello/ImageNet"""
+  /home/eaiello/ImageNet
