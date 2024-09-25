@@ -21,6 +21,6 @@ python main_lincls.py \
   -a resnet50 \
   --batch-size 512 \
   --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 \
-  --pretrained /home/nberardo/simsiam/model_best.pth.tar \
+  --pretrained /home/nberardo/simsiam/downloaded/checkpoint_0099.pth.tar \
   --lars \
   /home/eaiello/ImageNet
