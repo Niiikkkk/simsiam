@@ -165,7 +165,7 @@ def main_worker(gpu, ngpus_per_node, args):
         if os.path.isfile(args.pretrained):
             print("=> loading checkpoint '{}'".format(args.pretrained))
             checkpoint = torch.load(args.pretrained, map_location="cpu")
-            print(checkpoint)
+            print(checkpoint.keys())
 
             # rename moco pre-trained keys
             state_dict = checkpoint['state_dict']
